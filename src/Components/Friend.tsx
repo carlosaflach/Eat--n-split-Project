@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { IFriends } from '../App';
+import Button from './Button';
 
 interface IFriendProps {
   friend: IFriends;
@@ -23,7 +24,7 @@ const Friend: FC<IFriendProps> = ({ friend }) => {
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
 
-      <button className='button'>Select</button>
+      <Button>Select</Button>
     </li>
   );
 };
