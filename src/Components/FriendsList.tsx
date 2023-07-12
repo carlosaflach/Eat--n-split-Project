@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import Friend from './Friend';
+import { IFriends } from '../App';
 
 interface IFriendsProps {
-  initialFriends: any[];
+  initialFriends: IFriends[];
 }
 
 const FriendsList: FC<IFriendsProps> = ({ initialFriends }) => {

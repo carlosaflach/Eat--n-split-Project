@@ -1,7 +1,14 @@
 import React from 'react';
 import FriendsList from './Components/FriendsList';
 
-const initialFriends = [
+export interface IFriends {
+  id: number;
+  name: string;
+  image: string;
+  balance: number;
+}
+
+const initialFriends: IFriends[] = [
   {
     id: 118836,
     name: 'Clark',
