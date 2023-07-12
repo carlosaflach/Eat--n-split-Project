@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import Friend from './Friend';
-import { IFriends } from '../App';
+import { IFriend } from '../App';
 
 interface IFriendsProps {
-  initialFriends: IFriends[];
+  friends: IFriend[];
 }
 
-const FriendsList: FC<IFriendsProps> = ({ initialFriends }) => {
+const FriendsList: FC<IFriendsProps> = ({ friends }) => {
   return (
     <ul>
-      {initialFriends.map((friend) => (
+      {friends.map((friend) => (
         <Friend friend={friend} key={friend.id} />
       ))}
     </ul>

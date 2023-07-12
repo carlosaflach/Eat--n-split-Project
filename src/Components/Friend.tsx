@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { IFriends } from '../App';
+import { IFriend } from '../App';
 import Button from './Button';
 
 interface IFriendProps {
-  friend: IFriends;
+  friend: IFriend;
 }
 
 const Friend: FC<IFriendProps> = ({ friend }) => {
