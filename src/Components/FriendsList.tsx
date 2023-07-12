@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Friend from './Friend';
 
-const FriendsList = ({ initialFriends }) => {
-  const friends = initialFriends;
-  return <ul>List</ul>;
+interface IFriendsProps {
+  initialFriends: any[];
+}
+
+const FriendsList: FC<IFriendsProps> = ({ initialFriends }) => {
+  return (
+    <ul>
+      {initialFriends.map((friend) => (
+        <Friend friend={friend} key={friend.id} />
+      ))}
+    </ul>
+  );
 };
 
 export default FriendsList;
