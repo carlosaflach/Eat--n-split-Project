@@ -4,7 +4,7 @@ import Button from './Button';
 const FormAddFriend = () => {
   return (
     <form className='form-add-friend'>
-      <label htmlFor=''>Friend name</label>
+      <label>Friend name</label>
       <input type='text' />
 
       <label>Image URL</label>
