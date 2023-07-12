@@ -1,6 +1,8 @@
 import React from 'react';
 import FriendsList from './Components/FriendsList';
 import FormAddFriend from './Components/FormAddFriend';
+import Button from './Components/Button';
+import FormSplitBill from './Components/FormSplitBill';
 
 export interface IFriends {
   id: number;
@@ -36,7 +38,9 @@ const App = () => {
       <div className='sidebar'>
         <FriendsList initialFriends={initialFriends} />
         <FormAddFriend />
+        <Button>Add Friend</Button>
       </div>
+      <FormSplitBill />
     </div>
   );
 };
