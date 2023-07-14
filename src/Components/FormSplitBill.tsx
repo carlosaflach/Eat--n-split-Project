@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Button from './Button';
+import { IFriend } from '../App';
 
-const FormSplitBill = () => {
+interface IFomSplitBill {
+  selectedFriend: IFriend;
+}
+
+const FormSplitBill: FC<IFomSplitBill> = ({ selectedFriend }) => {
   return (
     <form className='form-split-bill'>
       <h2>Split a bill with X</h2>
@@ -12,7 +17,7 @@ const FormSplitBill = () => {
       <label>🧍‍♀️ Your expense</label>
       <input type='text' />
 
-      <label>👫 X's expense</label>
+      <label>👫 {selectedFriend.name} expense</label>
       <input type='text' disabled />
 
       <label>🤑 Who is paying the bill</label>
